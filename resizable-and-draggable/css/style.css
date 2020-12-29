@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+}
+/* rectangle */
+.rectangle {
+  width: 600px;
+  height: 300px;
+  background-color: #73c71a;
+  margin: 100px auto;
+  position: relative;
+  border: 2px solid white;
+}
+/* goal */
+.goal {
+  width: 60px;
+  height: 100px;
+  background-color: white;
+  border: white 2px solid;
+  float: left;
+  position: absolute;
+  background-color: transparent;
+}
+.left-goal {
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: none;
+}
+
+.right-goal {
+  top: 50%;
+  left: 100%;
+  border-right: none;
+  transform: translate(-100%, -50%);
+}
+/* circle */
+.circle {
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid white;
+  z-index: 700;
+}
+/* line-center */
+.center-line {
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid white;
+  position: absolute;
+  z-index: 800;
+}
+/* ball */
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("/resizable-and-draggable/images/ball1.png") no-repeat;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: toop 4s infinite;
+  position: absolute;
+  z-index: 1000;
+}
+/* POSITION */
+@keyframes toop {
+  0%,
+  100% {
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+  }
+  25% {
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  50% {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+  75% {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+}
