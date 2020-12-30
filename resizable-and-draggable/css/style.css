@@ -67,7 +67,7 @@ body {
   background-size: cover;
   top: 50%;
   transform: translateY(-50%);
-  animation: toop 4s infinite;
+  /* animation: toop 4s infinite; */
   position: absolute;
   z-index: 1000;
 }
